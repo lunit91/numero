@@ -6,7 +6,11 @@ function verificarNumero() {
     const input = document.getElementById("number-1-100").value;
     const numeroUsuario = parseInt(input, 10);
     const mensaje = document.getElementById("mensaje");
-
+    
+    if (isNaN(numeroUsuario)) {
+        mensaje.textContent = "pero pone un numero, graciosito";
+        return;
+    }
 
 
     intentos++;
